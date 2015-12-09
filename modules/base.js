@@ -50,7 +50,7 @@ function Module(name, source) {
  * @returns {*}
  */
 Module.prototype.resolvePath = function(path) {
-    return PathUtil.join(this.source, this.name, path);
+    return PathUtil.join(this.source, path);
 };
 
 /**
