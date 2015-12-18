@@ -28,6 +28,7 @@ root_of_package
 You must return object with two keys:
 
 1) name
+
 2) entity
 
 Example
