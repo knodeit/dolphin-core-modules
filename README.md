@@ -26,6 +26,7 @@ root_of_package
    factories
 ```
 You must return object with two keys:
+
 1) name
 2) entity
 
