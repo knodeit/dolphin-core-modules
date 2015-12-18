@@ -8,7 +8,11 @@ How to create new Module
 
 ```
 var Module = require('dolphin-core-modules').Module;
-var test = new Module('Test', __dirname); //the first parameter is name of module, unique for all modules  
+
+//the first parameter is name of module, unique for all modules
+//the second is current path
+var test = new Module('Test', __dirname); 
+
 ```
 
 You can create factories via two ways:
