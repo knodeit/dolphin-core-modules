@@ -44,13 +44,31 @@ function Module(name, source) {
 
 
 /**
- *
- * @param name
- * @param plus
+ * Resolve the path
+ * @param path
  * @returns {*}
  */
 Module.prototype.resolvePath = function(path) {
     return PathUtil.join(this.source, path);
+};
+
+/**
+ * Resolve all modules into each file
+ * @param path
+ * @returns {*}
+ */
+Module.prototype.resolveModules = function(path) {
+    var deferred = Q.defer();
+    //load css
+    FsUtil.readDir(this.resolvePath(path)).then(function (files) {
+        files.forEach(function (file) {
+            Dolphin.resolveObjects(require(file));
+        });
+
+        //exit
+        deferred.resolve();
+    });
+    return deferred.promise;
 };
 
 /**
