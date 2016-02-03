@@ -1,6 +1,6 @@
 {
     "name": "dolphin-core-modules",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "Modules for dolphin",
     "main": "index.js",
     "dependencies": {

@@ -7,6 +7,7 @@ var Dolphin = require('dolphin-core');
 var Logger = require('dolphin-logger');
 var FsUtil = require('dolphin-core-utils').FS;
 var PathUtil = require('path');
+var Q = require('q');
 var FACTORIES_FOLDER = 'factories';
 
 // private
